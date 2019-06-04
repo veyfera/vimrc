@@ -80,9 +80,9 @@ set ignorecase
 set smartcase
 
 " Create backup files in one directory 
-set backupdir=~/.vimstuff/bacup
-set dir=~/.vimstuff/bacup/swap
-set undodir=~/.vimstuff/bacup/undos
+set backupdir=~/.vimstuff/backup
+set dir=~/.vimstuff/backup/swap
+set undodir=~/.vimstuff/backup/undos
 set undofile
 set bk 
 

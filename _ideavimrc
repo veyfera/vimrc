@@ -86,4 +86,11 @@ set undodir=~/.vimstuff/backup/undos
 set undofile
 set bk 
 
-" 
+" my stuff
+"run a python3 file 
+noremap <Leader>p :! python3 %:p<CR>
+noremap <Leader>c :! clear<CR><CR>
+
+"toggle spell
+noremap <Leader>s :set spell<CR>
+noremap <Leader>S :set nospell<CR>

@@ -60,8 +60,9 @@ vnoremap > >gv  " better indentation use >
 " Show line numbers and length 
 set nowrap  " don't automatically wrap on lead
 set fo-=t   " don't automatically wrap text when typing
-set colorcolumn=80
-highlight ColorColumn ctermbg=233
+" uncomment later
+"set colorcolumn=80
+"highlight ColorColumn ctermbg=233
 
 " easier formatting of paragraphs, wrap so no pass of wrap
 vmap Q gq
@@ -100,29 +101,34 @@ noremap <Leader>c :! clear<CR><CR>
 noremap <Leader>s :set spell<CR>
 noremap <Leader>S :set nospell<CR>
 
+" make logs readable
+noremap <Leader>l :%s/\\n/\r/g<CR>
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'arcticicestudio/nord-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
+"Plug 'pangloss/vim-javascript'
+"Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'jparise/vim-graphql'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = [
-  \ 'coc-tsserver'
-  \ ]
+"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+"Plug 'jparise/vim-graphql'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"let g:coc_global_extensions = [
+"  \ 'coc-tsserver'
+" \ ]
 
 Plug 'preservim/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " File navigator
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
+"Plug 'leafOfTree/vim-svelte-plugin'
 call plug#end()
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-colorscheme nord
+"colorscheme nord
+colorscheme pyte
 
 nmap <C-_>   <Plug>NERDCommenterToggle
 imap <C-_>   <Esc><Plug>NERDCommenterToggle<CR>a
@@ -132,7 +138,7 @@ vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
 map <C-b><C-b> :NERDTreeToggle<cr>
 
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,javascriptreact,typescriptreact EmmetInstall
+autocmd FileType html,css,javascript,javascriptreact,typescriptreact,sass EmmetInstall
 
 let g:user_emmet_leader_key=','
 let g:user_emmet_settings = {

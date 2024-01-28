@@ -106,10 +106,10 @@ noremap <Leader>l :%s/\\n/\r/g<CR>
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'arcticicestudio/nord-vim'
+"Plug 'arcticicestudio/nord-vim'
 "Plug 'pangloss/vim-javascript'
 "Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+"Plug 'peitalin/vim-jsx-typescript'
 "Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 "Plug 'jparise/vim-graphql'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
